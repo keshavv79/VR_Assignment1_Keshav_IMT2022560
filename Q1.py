@@ -35,11 +35,11 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # Counting the coins
-cnt, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-min_contour_area = 475  
-filtered_cnt = [c for c in cnt if cv2.contourArea(c) > min_contour_area]
+count, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+contourAreaMin = 475  
+filteredCount = [c for c in count if cv2.contourArea(c) > contourAreaMin]
 rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-cv2.drawContours(rgb, filtered_cnt, -1, (0, 255, 0), thickness=2) 
+cv2.drawContours(rgb, filteredCount, -1, (0, 255, 0), thickness=2) 
 
 plt.imshow(rgb)
 plt.show()
@@ -47,4 +47,4 @@ cv2.imwrite("Question1Outputs/coinCountOutputImg5.jpg", cv2.cvtColor(rgb, cv2.CO
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-print("Number of coins in the image:", len(filtered_cnt))
+print("Number of coins in the image:", len(filteredCount))
