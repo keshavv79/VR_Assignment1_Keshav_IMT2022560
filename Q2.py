@@ -31,7 +31,7 @@ for i, img in enumerate(images):
     plt.title(f"Keypoints in Image {i+1}")
     plt.axis("off")
     plt.show()
-
+    # cv2.imwrite("Question2Outputs/keyPointFirst.png", keypointsImage)
 
 imageStitcher = cv2.Stitcher_create()
 error, stitchedImage = imageStitcher.stitch(images)
@@ -42,7 +42,7 @@ if not error:
     plt.title("Stitched Resized Image")
     plt.axis("off")
     plt.show()
-
+    # cv2.imwrite("Question2Outputs/stitchedOutput.png", keypointsImage)
 
     stitchedImage = cv2.copyMakeBorder(stitchedImage, 5, 5, 5, 5, cv2.BORDER_CONSTANT, (0, 0, 0))
 
@@ -80,7 +80,7 @@ if not error:
 
     stitchedImage = stitchedImage[y:y + h, x:x + w]
 
-    cv2.imwrite("stitchedOutputProcessed.png", stitchedImage)
+    cv2.imwrite("Question2Outputs/stitchedOutputProcessed.png", stitchedImage)
     plt.figure(figsize=(10, 6))
     plt.imshow(cv2.cvtColor(stitchedImage, cv2.COLOR_BGR2RGB))
     plt.title("Final Stitched Image")
