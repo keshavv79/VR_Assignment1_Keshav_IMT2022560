@@ -45,7 +45,7 @@ and stitch them into a seamless panorama.
    - **The number of coins detected for this image is correct: 8**<br> ![Result1](https://github.com/keshavv79/VR_Assignment1_Keshav_IMT2022560/blob/main/ResultsForGit/Result1.png) 
 
 - **Result 2**
-   - The number of coins detected for this image is correct: 2**<br> ![Result2](https://github.com/keshavv79/VR_Assignment1_Keshav_IMT2022560/blob/main/ResultsForGit/Result2.png)
+   - **The number of coins detected for this image is correct: 2**<br> ![Result2](https://github.com/keshavv79/VR_Assignment1_Keshav_IMT2022560/blob/main/ResultsForGit/Result2.png)
 - **Result 3**
    - **The number of coins detected for this image is incorrect: 5** <br> ![Result3](https://github.com/keshavv79/VR_Assignment1_Keshav_IMT2022560/blob/main/ResultsForGit/Result3.png)
 <br>The coin detection algorithm fails in certain cases, like image 3, due to poor contrast between coins and the background, making thresholding ineffective. Uneven lighting and
